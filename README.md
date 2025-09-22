@@ -7,7 +7,7 @@ Multi-platform Docker container with utilities to process Rich Text Format files
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/rtf)](https://hub.docker.com/r/leplusorg/rtf)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/rtf)](https://hub.docker.com/r/leplusorg/rtf)
 [![Docker Version](https://img.shields.io/docker/v/leplusorg/rtf?sort=semver)](https://hub.docker.com/r/leplusorg/rtf)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10081/badge)](https://bestpractices.coreinfrastructure.org/projects/10081)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10081/badge)](https://bestpractices.coreinfrastructure.org/projects/11222)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/leplusorg/docker-rtf/badge)](https://securityscorecards.dev/viewer/?uri=github.com/leplusorg/docker-rtf)
 
 ## Example without using the filesystem
