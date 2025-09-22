@@ -16,8 +16,10 @@ RUN apk upgrade --no-cache \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
     git=2.49.1-r0 \
+    pandoc-cli=3.6.4-r0 \
     py3-pip=25.1.1-r0 \
     python3=3.12.11-r0 \
+    unrtf=0.21.10-r3 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 

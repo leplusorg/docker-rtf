@@ -1,6 +1,6 @@
 # Rich Text Format
 
-Multi-platform Docker container with utilities to process Rich Text Format files (`unrtf`, `striprtf`, `rtf-converter`...).
+Multi-platform Docker container with utilities to process Rich Text Format files (`pandoc`, `unrtf`...).
 
 [![Dockerfile](https://img.shields.io/badge/GitHub-Dockerfile-blue)](rtf/Dockerfile)
 [![Docker Build](https://github.com/leplusorg/docker-rtf/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-rtf/actions?query=workflow:"Docker")
@@ -17,13 +17,13 @@ Let's say that you want to convert an Rich Text Format file intput.rtf in your c
 **Mac/Linux**
 
 ```bash
-cat intput.rtf | docker run --rm -i --net=none leplusorg/rtf asciidoc -o - > output.html
+cat intput.rtf | docker run --rm -i --net=none leplusorg/rst pandoc -f rst -t html - > output.html
 ```
 
 **Windows**
 
 ```batch
-type intput.rtf | docker run --rm -i --net=none leplusorg/rtf asciidoc -o - > output.html
+type intput.rtf | docker run --rm -i --net=none leplusorg/rst pandoc -f rst -t html - > output.html
 ```
 
 ## Example using the filesystem
@@ -33,7 +33,7 @@ Same thing, assuming that you want to convert an Rich Text Format file intput.rt
 **Mac/Linux**
 
 ```bash
-docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/rtf asciidoc -o output.html intput.rtf
+docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplusorg/rst pandoc -f rst -t html -o output.html intput.rtf
 ```
 
 **Windows**
@@ -41,13 +41,13 @@ docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" leplus
 In `cmd`:
 
 ```batch
-docker run --rm -t --net=none -v "%cd%:/tmp" leplusorg/rtf asciidoc -o output.html intput.rtf
+docker run --rm -t --net=none -v "%cd%:/tmp" leplusorg/rst pandoc -f rst -t html -o output.html intput.rtf
 ```
 
 In PowerShell:
 
 ```pwsh
-docker run --rm -t --net=none -v "${PWD}:/tmp" leplusorg/rtf asciidoc -o output.html intput.rtf
+docker run --rm -t --net=none -v "${PWD}:/tmp" leplusorg/rst pandoc -f rst -t html -o output.html intput.rtf
 ```
 
 ## Software Bill of Materials (SBOM)
