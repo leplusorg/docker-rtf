@@ -18,7 +18,7 @@ RUN apk upgrade --no-cache \
     git=2.54.0-r0 \
     pandoc-cli=3.10-r0 \
     py3-pip=26.1.2-r0 \
-    python3=3.14.7-r0 \
+    python3=3.14.7-r1 \
     unrtf=0.21.10-r4 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
